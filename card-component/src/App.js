@@ -5,6 +5,7 @@ import ImgCardDesktop from "./images/image-product-desktop.jpg";
 function App() {
   return (
     <div className="App border bg-white text-black rounded-xl max-w-2xl xl:flex xl:flex-row xl:shadow-xl">
+      {/* Header */}
       <header className="xl:w-1/2">
         <img
           className="rounded-t-xl xl:hidden"
@@ -17,17 +18,24 @@ function App() {
           alt="Image Gabrielle Essence Eau De Parfum"
         />
       </header>
-      <section className="p-5 xl:px-8 xl:py-11 flex flex-col gap-4 xl:gap-7 xl:w-1/2">
+
+      {/* Main Content */}
+      <main className="p-5 xl:px-8 xl:py-11 flex flex-col gap-4 xl:gap-7 xl:w-1/2">
+        {/*Product Information */}
         <div className="flex flex-col gap-5">
           <h3 className="tracking-[0.3em] text-[#6C7289] text-sm">PERFUME</h3>
           <h1 id="title" className="text-3xl font-bold xl:text-4xl">
             Gabrielle Essence Eau De Parfum
           </h1>
         </div>
+
+        {/* Product Description */}
         <p className="text-[#6C7289] text-sm">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
+
+        {/* Product Pricing */}
         <div className="flex flex-row items-center gap-6 ">
           <p id="paragraph-1" className="text-3xl text-[#3d8167]">
             $149.99
@@ -36,13 +44,15 @@ function App() {
             $169.99
           </p>
         </div>
+
+        {/* Add to Cart Button */}
         <a href="https://www.frontendmentor.io/home">
           <button className="w-full justify-center items-center flex flex-row gap-3 border py-3 rounded-xl bg-[#3d8167] text-white font-semibold hover:bg-[#1a4032] hover:cursor-cell">
-            <img src={IconCard} alt="Add your product to the card" />
-            <p>Add to card</p>
+            <img src={IconCard} alt="Add your product to the cart" />
+            <p>Add to cart</p>
           </button>
         </a>
-      </section>
+      </main>
     </div>
   );
 }
